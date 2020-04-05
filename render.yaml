@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: flask-poetry
+    env: python
+    plan: starter
+    buildCommand: poetry install
+    startCommand: gunicorn app:app --chdir ./poetry_flask
